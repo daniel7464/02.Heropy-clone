@@ -1,6 +1,23 @@
-/**
- * 검색창 제어
- */
+// 로고 이미지 요소를 생성합니다.
+const logo_1 = document.createElement("img");
+logo_1.setAttribute("src", "./images/last_game.png");
+logo_1.setAttribute("id", "logo_1");
+document.body.appendChild(logo_1);
+  
+// 로고 이미지의 opacity를 0에서 1로 애니메이션합니다.
+logo_1.style.opacity = 1;
+  
+// 2초 후 로고 이미지의 opacity를 1에서 0으로 애니메이션합니다.
+setTimeout(() => {
+    logo_1.style.opacity = 0;
+}, 2000);
+
+// 페이지 컨텐츠가 페이드인되도록 합니다.
+setTimeout(function() {
+    document.body.style.opacity = 1;
+}, 3000); // 3초 뒤에 페이지 컨텐츠가 페이드인됩니다.
+
+/* 검색창 제어 */
 // 검색창 요소(.search) 찾기.
 const searchEl = document.querySelector('.search');
 const searchInputEl = searchEl.querySelector('input');
@@ -8,11 +25,13 @@ const searchInputEl = searchEl.querySelector('input');
 searchEl.addEventListener('click', function () {
   searchInputEl.focus();
 });
+
 // 검색창 요소 내부 실제 input 요소에 포커스되면 실행.
 searchInputEl.addEventListener('focus', function () {
   searchEl.classList.add('focused');
   searchInputEl.setAttribute('placeholder', '통합검색');
 });
+
 // 검색창 요소 내부 실제 input 요소에서 포커스가 해제(블러)되면 실행.
 searchInputEl.addEventListener('blur', function () {
   searchEl.classList.remove('focused');

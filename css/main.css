@@ -1,3 +1,4 @@
+
 /*COMMON*/
 body {
   font-family: 'Nanum Gothic', sans-serif;
@@ -19,6 +20,18 @@ img {
   width: 1100px;
   margin: 0 auto;
   position: relative;
+}
+
+#logo_1 {
+  position: fixed; /* 로고 이미지가 위치할 곳을 지정합니다. */
+  top: 50%; /* 로고 이미지가 수직 방향으로 가운데 위치하도록 합니다. */
+  left: 50%; /* 로고 이미지가 수평 방향으로 가운데 위치하도록 합니다. */
+  transform: translate(-50%, -50%); /* 로고 이미지가 정확히 가운데 위치하도록 합니다. */
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* 페이드인/아웃 애니메이션 효과 */
+  width: 100vw;
+  height: auto;
+  z-index: 300;
 }
 
 /*BUTTON*/
@@ -262,8 +275,9 @@ header .badges .badge {
 /*VISUAL*/
 .visual {
   margin-top: 120px;
-  background-image: url("../images/visual_bg.jpg");
+  background-image: url("../images/Soccer_ground.jpg");
   background-position: center;
+  background-repeat: no-repeat;
 }
 .visual .inner {
   height: 646px;
@@ -271,7 +285,10 @@ header .badges .badge {
 .visual .title {
   position: absolute;
   top: 40px;
-  left: -10px;
+  left: -350px;
+}
+.visual .title img{
+  width: 250px;
 }
 .visual .title .btn {
   position: absolute;
@@ -281,7 +298,7 @@ header .badges .badge {
 .visual .cup1.image {
   position: absolute;
   bottom: 0;
-  right: -47px;
+  right: -400px;
 }
 .visual .cup1.text {
   position: absolute;
@@ -290,8 +307,9 @@ header .badges .badge {
 }
 .visual .cup2.image {
   position: absolute;
-  bottom: 0;
-  right: 162px;
+  width: 400px;
+  bottom: 10px;
+  left: -140px;
 }
 .visual .cup2.text {
   position: absolute;
@@ -301,7 +319,7 @@ header .badges .badge {
 .visual .spoon {
   position: absolute;
   bottom: 0;
-  left: 275px;
+  left: 550px;
 }
 .visual .fade-in {
   opacity: 0;
