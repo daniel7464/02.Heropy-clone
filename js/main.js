@@ -5,17 +5,15 @@ logo_1.setAttribute("id", "logo_1");
 document.body.appendChild(logo_1);
   
 // 로고 이미지의 opacity를 0에서 1로 애니메이션합니다.
-logo_1.style.opacity = 1;
+logo_1.style.opacity = 1; 
   
 // 2초 후 로고 이미지의 opacity를 1에서 0으로 애니메이션합니다.
 setTimeout(() => {
     logo_1.style.opacity = 0;
+    setInterval(() => {
+      logo_1.style.display = "none"; // 이미지를 사라지게 하여 사이트가 동작되게 함
+    }), 3000    
 }, 2000);
-
-// 페이지 컨텐츠가 페이드인되도록 합니다.
-setTimeout(function() {
-    document.body.style.opacity = 1;
-}, 3000); // 3초 뒤에 페이지 컨텐츠가 페이드인됩니다.
 
 /* 검색창 제어 */
 // 검색창 요소(.search) 찾기.

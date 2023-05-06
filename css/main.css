@@ -27,7 +27,6 @@ img {
   top: 50%; /* 로고 이미지가 수직 방향으로 가운데 위치하도록 합니다. */
   left: 50%; /* 로고 이미지가 수평 방향으로 가운데 위치하도록 합니다. */
   transform: translate(-50%, -50%); /* 로고 이미지가 정확히 가운데 위치하도록 합니다. */
-  opacity: 0;
   transition: opacity 1s ease-in-out; /* 페이드인/아웃 애니메이션 효과 */
   width: 100vw;
   height: auto;
@@ -112,14 +111,14 @@ header {
   position: fixed;
   top: 0;
   z-index: 9;
-  background-color: #F6F5F0;
-  border-bottom: 1px solid #c8c8c8;
+  background-image: linear-gradient(256deg,#7a28ff,#255fbe);
+  border-bottom: 1px solid #255fbe;
 }
 header > .inner {
   height: 120px;
 }
 header .logo {
-  height: 75px;
+  height: 100px;
   position: absolute;
   top: 0;
   bottom: 0;
