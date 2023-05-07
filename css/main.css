@@ -155,7 +155,7 @@ header .sub-menu ul.menu li a {
   padding: 11px 16px;
   display: block;
   font-size: 13px;
-  color: #656565;
+  color: #e5e5e5;
 }
 header .sub-menu ul.menu li a:hover {
   color: #000;
@@ -204,6 +204,7 @@ header .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
   font-family: Arial, sans-serif;
   font-size: 13px;
+  color: #e5e5e5;
 }
 header .main-menu .item:hover .item__name {
   background-color: #2C2A29;
